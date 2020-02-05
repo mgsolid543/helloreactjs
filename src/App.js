@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import HelloWorld from './HelloWorld';
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = { data : ''}
+  }
+
+  handleChange = (event) => {
+    this.setState({ data: event.target.value })
+  }
+
   render() {
     return (
       <div>
-        <HelloWorld namaDepan="Irpan" namaBelakang="Budiana" />
-        <HelloWorld namaDepan="Her" namaBelakang="Lani" />
-        <HelloWorld namaDepan="Budi" namaBelakang="Santoso" />
+        <input type="text" onChange={this.handleChange} />
+        <h3>{this.state.data}</h3>
       </div>
     )
   }
