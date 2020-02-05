@@ -5,9 +5,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <HelloWorld />
-        <HelloWorld />
-        <HelloWorld />
+        <HelloWorld nama="Irpan" />
+        <HelloWorld nama="Budiana" />
+        <HelloWorld nama="Lani" />
       </div>
     )
   }
