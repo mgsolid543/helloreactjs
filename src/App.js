@@ -4,19 +4,35 @@ class App extends Component {
 
   constructor() {
     super();
-    this.state = { data : ''}
-  }
-
-  handleChange = (event) => {
-    this.setState({ data: event.target.value })
+    this.state = { 
+      siswa: [
+        {
+          id: 1,
+          nama: 'Irpan Budiana',
+        },
+        {
+          id: 2,
+          nama: 'Budi Santosa',
+        },
+        {
+          id: 3,
+          nama: 'Ahmad Sanusi',
+        }
+      ]
+    }
   }
 
   render() {
     return (
       <div>
-        <input type="text" onChange={this.handleChange} />
-        <h3>{this.state.data}</h3>
-      </div>
+        {
+          this.state.siswa.map((dinamis, key)=>
+          <div>
+            <h3>{dinamis.id}. {dinamis.nama}</h3>
+          </div>
+          )
+        }
+        </div>
     )
   }
 }
