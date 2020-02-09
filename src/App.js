@@ -21,7 +21,7 @@ class App extends Component {
         {
           this.state.homestays.map((dinamis, key)=>
           <div>
-            <h3>{dinamis.nama}. Rp {dinamis.harga} rb</h3>
+            <h3>{dinamis.nama} - Rp {dinamis.harga} rb</h3>
           </div>
           )
         }
