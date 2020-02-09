@@ -11,8 +11,6 @@ class HelloWorld extends Component {
         this.setState({ salam: 'Hi!'})
     }
 
-
-
   render() {
     return (
         <div className="warna">
